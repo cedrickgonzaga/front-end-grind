@@ -1,6 +1,8 @@
 let btn = document.getElementById("btn");
-let container = document.getElementById("cntr");
+let homepage = document.getElementById("homepage");
+let quizPage = document.getElementById("questions");
 
 btn.addEventListener("click", () => {
-  container.remove();
+  homepage.remove();
+  quizPage.classList.toggle("hidden");
 });

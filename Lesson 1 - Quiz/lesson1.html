@@ -6,13 +6,30 @@
       href="https://fonts.googleapis.com/css?family=Noto+Sans+Lycian:regular"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/lesson1.css" />
+    <link rel="stylesheet" href="lesson1.css" />
   </head>
   <body>
-    <div class="container" id="cntr">
+    <div class="container" id="homepage">
       <h1 id="title">Quiz Time!</h1>
       <p>Test your knowledge with this fun quiz questions.</p>
       <button id="btn">Start Quiz</button>
+    </div>
+
+    <div class="container hidden" id="questions">
+      <h1 id="questionTitle">Tool that protects perimiter security layer?</h1>
+
+      <div class="container" id="score">
+        <p class="paragraph" id="questionCount">Question 1 out of 5</p>
+        <p class="paragraph" id="score">Score: 0</p>
+      </div>
+
+      <div class="container" id="answerButton">
+        <button class="answers" id="q1">Firewall</button>
+        <button class="answers" id="q2">VLAN</button>
+        <button class="answers" id="q3">Anti-virus</button>
+        <button class="answers" id="q4">MFA</button>
+        <button class="answers" id="q5">Encryption</button>
+      </div>
     </div>
   </body>
   <script src="lesson1.js"></script>

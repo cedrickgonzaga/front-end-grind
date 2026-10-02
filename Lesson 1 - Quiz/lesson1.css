@@ -1,7 +1,8 @@
-* {
+ {
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+  font-size: 1rem;
 }
 
 :root {
@@ -11,36 +12,69 @@
   --text-body: #000000; /* Black */
   --color-primary: #7a93a8; /* Bermuda Gray */
   --text-on-primary: #000000; /* Black */
+  --header: 1.5rem;
+  --secondary-header: 1rem;
+  --paragraph: 0.9rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding: 16px;
+  padding: 0.5rem;
   border-radius: 8px;
-  gap: 16px;
+  gap: 0rem;
 }
 
 h1 {
+  font-size: var(--header);
   color: var(--text-heading);
+  margin: 0rem;
 }
 
 p {
+  font-size: var(--paragraph);
   color: var(--text-secondary);
 }
 
-button {
+#btn {
   padding: 8px;
   background-color: var(--color-primary);
   border: 2px;
   border-radius: 5px;
+  color: #ffffff;
+  font-size: var(--paragraph);
 }
 
-button:active {
-  background-color: hwb(204 26% 53%);
-  transition: 0.2s;
+#btn:hover {
+  background-color: hwb(210 91% 8%);
+  transition: 0.4s;
   border: 2px;
   border-color: var(--text-on-primary);
+  color: #7a93a8;
+}
+
+#questionCount {
+  color: var(--text-body);
+}
+
+.hidden {
+  display: none;
+}
+
+.paragraph {
+  color: var(--text-body);
+}
+
+#score {
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10rem;
 }
