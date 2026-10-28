@@ -3,6 +3,7 @@ let homepage = document.getElementById("homepage");
 let quizPage = document.getElementById("questions");
 let counter = document.getElementById("counter");
 let answers = document.querySelectorAll(".answers");
+let correctAnswer = document.getElementById("correctAnswer");
 
 btn.addEventListener("click", () => {
   homepage.remove();
@@ -11,12 +12,21 @@ btn.addEventListener("click", () => {
 
 answers.forEach((button) => {
   button.addEventListener("click", () => {
-    const isCorrect = button.dataset.correct === "true";
-    if (isCorrect) {
-      button.classList.add("correct");
-      button.insertAdjacentHTML("beforeend", "<span>✅</span>");
-    } else {
+    const isWrong = button.dataset.correct === "wrong";
+    if (isWrong) {
       button.classList.add("wrong");
+    }
+  });
+});
+
+correctAnswer.addEventListener("click", () => {
+  correctAnswer.classList.add("correct");
+  correctAnswer.insertAdjacentHTML("beforeend", "<span>✅</span>");
+  correctAnswer.disabled = true;
+  counter.textContent = Number(counter.textContent) + 1;
+  answers.forEach((button) => {
+    if (button.dataset.correct == "wrong") {
+      button.disabled = true;
     }
   });
 });
