@@ -29,13 +29,13 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 0.5rem;
-  border-radius: 8px;
+  border-radius: 1px;
   gap: 0rem;
 }
 
 #homepage {
   background-color: #ebebeb;
-  border-radius: 1rem;
+  border-radius: 0, 8px, 0, 8px;
   border: #000000 0.1rem;
   padding: 2rem;
 }
@@ -76,17 +76,18 @@ p {
 
 #questionCount {
   color: var(--text-body);
+  margin-right: 2rem;
 }
 
 #questionTitle {
   font-size: 1.2rem;
 }
 
-#score {
+#scoreContainer {
   flex-direction: row;
   justify-content: space-between;
   gap: 19rem;
-  padding-top: 0.2rem;
+  margin-top: 0.3rem;
 }
 
 .answers {
@@ -96,6 +97,9 @@ p {
   text-align: start;
   border-radius: 0.5rem;
   border-style: groove;
+  width: 100vh;
+  display: flex;
+  justify-content: space-between;
 }
 
 #answerButton {
@@ -110,4 +114,14 @@ p {
 
 .paragraph {
   color: var(--text-body);
+}
+
+.wrong {
+  background-color: rgb(221, 121, 121);
+  color: white;
+}
+
+.correct {
+  background-color: rgb(177, 224, 154);
+  color: black;
 }

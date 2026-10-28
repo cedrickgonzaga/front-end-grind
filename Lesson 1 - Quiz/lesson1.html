@@ -1,4 +1,4 @@
-<!DOCTYPE >
+<!doctype html>
 <html>
   <head>
     <title>Quiz</title>
@@ -16,21 +16,27 @@
     </div>
 
     <div class="container hidden" id="questions">
-      <h1 id="questionTitle">Tool that protects perimiter security layer?</h1>
+      <h1 id="questionTitle">
+        What security tool protects the perimiter layer?
+      </h1>
 
-      <div class="container" id="score">
+      <div class="container" id="scoreContainer">
         <p class="paragraph" id="questionCount">Question 1 out of 5</p>
-        <p class="paragraph" id="score">Score: 0</p>
+        <p class="paragraph" id="score">
+          <strong> Score: <span id="counter">0</span> </strong>
+        </p>
       </div>
 
       <div class="container" id="answerButton">
-        <button class="answers" id="q1">Firewall</button>
-        <button class="answers" id="q2">VLAN</button>
-        <button class="answers" id="q3">Anti-virus</button>
-        <button class="answers" id="q4">MFA</button>
-        <button class="answers" id="q5">Encryption</button>
+        <button class="answers" data-correct="true">
+          <span>Firewall</span>
+        </button>
+        <button class="answers" data-correct="wrong">VLAN</button>
+        <button class="answers" data-correct="wrong">Anti-virus</button>
+        <button class="answers" data-correct="wrong">MFA</button>
+        <button class="answers" data-correct="wrong">Encryption</button>
       </div>
     </div>
+    <script src="lesson1.js"></script>
   </body>
-  <script src="lesson1.js"></script>
 </html>
